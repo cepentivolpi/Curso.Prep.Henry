@@ -10,29 +10,24 @@ function crearUsuario() {
   // Tu código:
   class Usuario
   {
-    constructor(usuario, nombre, email, password )
+    constructor(opciones)
     { 
-       this.usuario = usuario;
-       this.nombre = nombre;
-       this.email = email;
-       this.password= password;
-      //this.opciones = opciones;
-        /*opciones = {
-        usuario : usuario,
-        nombre : nombre,
-        email : email,
-        password : password
-      }*/
-      
-      this.saludar = saludar();
+       this.usuario = opciones.usuario;
+       this.nombre = opciones.nombre;
+       this.email = opciones.email;
+       this.password= opciones.password;
+       this.saludar = saludar;
     }
   }
- /* var opciones = {
-    usuario : usuario,
-    nombre : nombre,
-    email : email,
-    password : password
-  }*/
+    
+  var opciones = 
+  {
+    usuario : this.usuario,
+    nombre : this.nombre,
+    email : this.email,
+    password : this.password
+  }
+  
   function saludar()
   {
     return "Hola, mi nombre es " + this.nombre;
